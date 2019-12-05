@@ -21,9 +21,6 @@ public class Palindrome {
      * <p>Результат: true</p>
      */
     public boolean isPalindrome(String text) {
-        if (text.equals("")) {
-            return true;
-        }
         StringBuilder strOnlyNumbersAndLetters =
                 new StringBuilder(text.replaceAll("[^0-9a-zA-Z]+", ""));
         return strOnlyNumbersAndLetters.toString().toLowerCase()
