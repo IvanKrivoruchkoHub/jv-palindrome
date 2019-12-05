@@ -24,7 +24,9 @@ public class Palindrome {
         if (text.equals("")) {
             return true;
         }
-        StringBuilder str = new StringBuilder(text.replaceAll("[^0-9a-zA-Z]+", ""));
-        return str.toString().toLowerCase().equals(str.reverse().toString().toLowerCase());
+        StringBuilder strOnlyNumbersAndLetters =
+                new StringBuilder(text.replaceAll("[^0-9a-zA-Z]+", ""));
+        return strOnlyNumbersAndLetters.toString().toLowerCase()
+                .equals(strOnlyNumbersAndLetters.reverse().toString().toLowerCase());
     }
 }
